@@ -46,64 +46,6 @@ static string getPhoneNumber() {
     }
 }
 
-/*
-static void generateMnemonics(const string& number, Map<char, string>& mappings, Vector<string>& mnemonics) {
-    if (number.length() == 1) {
-        char myDigit = number.at(0);
-        string possibleChars = mappings.get(myDigit);
-    } else {
-        
-    }
-}
-*/
-
-/*
-static void generateMnemonics(const string& number, Map<char, string>& mappings, Vector<string>& mnemonics) {
-    if (number.length() == 1) {
-        char myDigit = number.at(0);
-        string possibleChars = mappings.get(myDigit);
-        for (int i = 0; i < possibleChars.length(); i++) {
-            char charToAdd = mappings.get(myDigit).at(i);
-            stringstream ss;
-            string toAdd;
-            ss << charToAdd;
-            ss >> toAdd;
-            mnemonics.add(toAdd);
-        }
-    } else {
-        
-    }
-}
-*/
-
-/*
-static void generateMnemonics(const string& number, Map<char, string>& mappings, Vector<string>& mnemonics) {
-    if (number.length() == 1) {
-        char myDigit = number.at(0);
-        string possibleChars = mappings.get(myDigit);
-        for (int i = 0; i < possibleChars.length(); i++) {
-            char charToAdd = mappings.get(myDigit).at(i);
-            stringstream ss;
-            string toAdd;
-            ss << charToAdd;
-            ss >> toAdd;
-            mnemonics.add(toAdd);
-        }
-    } else {
-        for (int i = 0; i < number.length(); i++) {
-            char ch = number[i];
-            string rest = number.substr(0, i) + number.substr(i + 1);
-            generateMnemonics(rest, mappings, mnemonics);
-            for (int n = 0; n < mnemonics.size(); n++) {
-                string s = mnemonics.get(n);
-                mnemonics.add(ch + s);
-            }
-        }
-    }
-}
- */
-
-
 static void generateMnemonics(const string& number, Map<char, string>& mappings, Vector<string>& mnemonics) {
     char myDigit = number.at(0);
     
