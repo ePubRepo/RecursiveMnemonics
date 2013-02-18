@@ -123,8 +123,8 @@ static void generateMnemonics(const string& number, Map<char, string>& mappings,
         string myLetters = mappings.get(myDigit);
         int initialSize = mnemonics.size();
         for (int j = 0; j < initialSize; j++) {
-            string s = mnemonics.get(j);
-            mnemonics.remove(j);
+            string s = mnemonics.get(0);
+            mnemonics.remove(0);
             for (int k = 0; k < myLetters.size(); k++) {
                 mnemonics.add(myLetters.at(k) + s);
             }
